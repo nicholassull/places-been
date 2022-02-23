@@ -16,6 +16,22 @@ namespace PlacesBeen.TestTools
       Place newPlace = new Place("test", "January 4th");
       Assert.AreEqual(typeof(Place), newPlace.GetType());
     }
+   [TestMethod]
+    public void GetDescription_ReturnsDescription_String()
+    {
+      //Arrange
+      string description = "City";
+      string dateTraveled = "January 4th";
+      Place newPlace = new Place(description, dateTraveled);
+      
+      //Act
+      string result = newPlace.CityName;
+
+      //Assert
+      Assert.AreEqual(description, result);
+    }
 
   }
 }
+
+
