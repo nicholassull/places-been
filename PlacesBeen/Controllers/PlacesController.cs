@@ -13,6 +13,10 @@ namespace PlacesBeen.Controllers
       List<Place> allPlace = Place.GetAll();
       return View(allPlace);
     }
+    [HttpGet("/places/new")]
+    public ActionResult New()
+    {
+      return View();
+    }
   }
 }
-

@@ -17,7 +17,5 @@ namespace PlacesBeen.TestTools
       Assert.AreEqual(typeof(Place), newPlace.GetType());
     }
 
-
-
   }
 }
