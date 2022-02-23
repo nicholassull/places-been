@@ -48,8 +48,23 @@ namespace PlacesBeen.TestTools
       //Assert
       CollectionAssert.AreEqual(newPlace, result);
     }
+    [TestMethod]
+    public void GetAll_ReturnsPlaces_PlaceList()
+    {
+      //Arrange
+      string city01 = "Portland";
+      string city02 = "Seattle";
+      string date01 = "January 3rd";
+      string date02 = "December 7th";
+      Place newPlace1 = new Place(city01, date01);
+      Place newPlace2 = new Place (city02, date02);
+      List<Place> placeList = new List<Place> {newPlace1, newPlace2};
+      //Act
+      List<Place> result = Place.GetAll();
+      //Assert
+      CollectionAssert.AreEqual(placeList, result);
+    }
   }
 }
-
 
 
