@@ -25,7 +25,7 @@ namespace PlacesBeen.Controllers
       Place myPlace = new Place( locationInput, dateInput );
       return RedirectToAction("Index");
     }
-    [HttpPost("/items/delete")]
+    [HttpPost("/places/delete")]
     public ActionResult DeleteAll()
     {
       Place.ClearAll();
