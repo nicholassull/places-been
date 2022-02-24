@@ -5,7 +5,8 @@ namespace PlacesBeen.Models
   public class Place
   {
     public string CityName { get; set; }
-    public string DateTraveled { get; set; } 
+    public string DateTraveled { get; set; }
+    public int Id { get; }
     private static List<Place> _instances = new List<Place> {};    
     
 
@@ -14,7 +15,7 @@ namespace PlacesBeen.Models
       CityName = cityName;
       DateTraveled = dateTraveled;
       _instances.Add(this);
-    
+      Id = _instances.Count;
     }
     public static List<Place> GetAll()
     {
