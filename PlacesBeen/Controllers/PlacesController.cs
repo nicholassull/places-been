@@ -33,4 +33,3 @@ namespace PlacesBeen.Controllers
     }
   }
 }
-    //Next, create an index.cshtml file under Places to show places that have been created by user.
